@@ -563,7 +563,6 @@ export default function App() {
                                     href={deal.url} 
                                     target="_blank" 
                                     referrerPolicy="no-referrer"
-                                    onClick={(e) => handleVisitRedirect(e, deal.url, deal.merchant)}
                                     className="px-3.5 py-1.5 bg-[#FDFCFB] text-[#2D2E2E] hover:bg-[#2D2E2E] hover:text-[#FDFCFB] border border-[#E8E6E1] text-[10px] uppercase font-bold tracking-wider flex items-center gap-1.5 transition-all cursor-pointer"
                                   >
                                     <span>Visit Site</span>

@@ -227,7 +227,7 @@ function generateFallbackDeals(productName: string) {
     } else if (m.name === "Croma Store") {
       url = `https://www.croma.com/search/?text=${encodeURIComponent(productName)}`;
     } else if (m.name === "Reliance Digital") {
-      url = `https://www.reliancedigital.in/search?q=${encodeURIComponent(productName)}:relevance`;
+      url = `https://www.reliancedigital.in/search?q=${encodeURIComponent(productName)}`;
     }
     
     return {
@@ -466,7 +466,7 @@ Step-by-step verification instructions:
           } else if (mLower.includes("croma")) {
             finalUrl = `https://www.croma.com/search/?text=${searchParam}`;
           } else if (mLower.includes("reliance")) {
-            finalUrl = `https://www.reliancedigital.in/search?q=${searchParam}:relevance`;
+            finalUrl = `https://www.reliancedigital.in/search?q=${searchParam}`;
           } else {
             finalUrl = `https://www.google.com/search?q=${encodeURIComponent(resultObj.productName + " " + (deal.merchant || ''))}`;
           }
