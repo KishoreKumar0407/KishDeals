@@ -1,0 +1,6 @@
+{
+  "name": "Price Comparison Tracker",
+  "description": "Interactive price comparison dashboard that uses search grounding to find real-time deals across major online stores, tracks history, and manages alert thresholds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
