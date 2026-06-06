@@ -7,6 +7,7 @@ export interface ProductDeal {
   shipping?: string;
   originalPrice?: number;
   discountPercent?: number;
+  offers?: string;
 }
 
 export interface ComparisonResult {

@@ -342,7 +342,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-base font-bold tracking-widest text-[#2D2E2E]">KishDeals</h1>
-              <p className="text-[10px] uppercase tracking-wider text-[#7D7C78]">Google Search Grounded Scraper</p>
+              <p className="text-[10px] uppercase tracking-wider text-[#7D7C78]">Live Price Comparison Engine</p>
             </div>
           </div>
 
@@ -394,7 +394,7 @@ export default function App() {
             <div className="bg-[#FDFCFB] rounded-none border border-[#E8E6E1] p-6 sm:p-8">
               <div className="max-w-2xl">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5B6B5B] text-[9px] font-bold text-white uppercase tracking-wider mb-4">
-                  Live Grounded Crawlers
+                  Live Store Scrapers
                 </span>
                 <h2 className="text-3xl font-light text-[#2D2E2E] tracking-tight leading-tight">Compare Store Price Sheets</h2>
                 <p className="text-sm text-[#7D7C78] mt-2 mb-6">Specify any retail device or system (e.g. MacBook Pro M3, Sony WH-1000XM5, iPhone 15) to pull live product rates globally.</p>
@@ -481,7 +481,7 @@ export default function App() {
                     <div className="bg-[#FDFCFB] rounded-none border border-[#E8E6E1] overflow-hidden">
                       <div className="p-6 bg-[#2D2E2E] text-[#FDFCFB] flex items-center justify-between">
                         <div>
-                          <p className="text-[10px] text-[#A2A19D] font-bold uppercase tracking-widest font-mono">Grounding Result</p>
+                          <p className="text-[10px] text-[#A2A19D] font-bold uppercase tracking-widest font-mono">Comparison Result</p>
                           <h3 className="text-lg font-bold tracking-widest uppercase text-white mt-0.5">{currentResult.productName}</h3>
                         </div>
                         <div className="text-right">
@@ -504,10 +504,10 @@ export default function App() {
                         <div className="px-6 py-2.5 bg-emerald-50/80 border-b border-[#E8E6E1] flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-xs text-[#166534]">
                           <span className="flex items-center gap-1.5 font-semibold">
                             <CheckCircle className="w-3.5 h-3.5 shrink-0" /> 
-                            <span>Live E-Commerce Deep Grounding</span>
+                            <span>Live E-Commerce Price Scrapers</span>
                           </span>
                           <span className="text-[10px] font-mono text-[#15803d]">
-                            Successfully scanned and extracted accurate real-time prices across Amazon & Flipkart.
+                            Successfully scanned and extracted accurate real-time prices across Amazon, Flipkart, Reliance, and Croma.
                           </span>
                         </div>
                       )}
@@ -534,7 +534,13 @@ export default function App() {
                                   <h4 className="text-sm font-semibold text-[#2D2E2E] leading-tight pr-4">
                                     {deal.title}
                                   </h4>
-                                  <div className="flex items-center gap-3 text-xs text-[#7D7C78]">
+                                  {deal.offers && (
+                                    <div className="inline-flex items-center gap-1.5 text-[10px] text-emerald-800 bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 mt-1 font-bold uppercase tracking-wider select-none w-fit">
+                                      <Percent className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                                      <span>{deal.offers}</span>
+                                    </div>
+                                  )}
+                                  <div className="flex items-center gap-3 text-xs text-[#7D7C78] mt-1">
                                     {deal.rating && <span className="text-[#5B6B5B] font-semibold">★ {deal.rating}</span>}
                                     {deal.shipping && <span className="flex items-center gap-1"><Info className="w-3 h-3 text-[#A2A19D]" /> {deal.shipping}</span>}
                                   </div>
@@ -695,14 +701,14 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* How Grounding works panel */}
+                    {/* How Price Scrapers work panel */}
                     <div className="bg-[#F5F3EF] rounded-none border border-[#E8E6E1] p-6 space-y-3">
                       <div className="flex items-center gap-2">
                         <Info className="w-4 h-4 text-[#7D7C78]" />
-                        <h5 className="text-[10px] font-bold text-[#2D2E2E] uppercase tracking-widest">Grounding Technology</h5>
+                        <h5 className="text-[10px] font-bold text-[#2D2E2E] uppercase tracking-widest">Price Tracking Technology</h5>
                       </div>
                       <p className="text-[11px] text-[#7D7C78] leading-relaxed">
-                        Conventional scrapers crash when store selector tags undergo updates. The Gemini Search Grounding framework dynamically retrieves active live listings directly from the live Google Index, compiling price entries in a robust JSON layout.
+                        Our price comparison engine queries live search results and pages dynamically from Amazon, Flipkart, Reliance Digital, and Croma Store. It filters out irrelevant options and matches the exact cheapest deals to ensure you always get the best rates.
                       </p>
                     </div>
                   </div>

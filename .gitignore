@@ -8,3 +8,21 @@ coverage/
 !.env.example
 git_tmp/
 data/
+
+# Scraper Temp Crawls and Test/Debug Scripts
+*.html
+croma_state.json
+reliance_parsed_state.json
+reliance_state.json
+test-*.ts
+test-*.js
+debug-*.ts
+debug-*.js
+parse-*.js
+croma-*.js
+croma-*.ts
+download-and-search.ts
+dump-*.ts
+find-*.js
+list-*.ts
+print-*.ts
